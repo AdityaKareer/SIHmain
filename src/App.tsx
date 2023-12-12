@@ -1,17 +1,15 @@
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Users from "./pages/users/Users";
-import Products from "./pages/products/Products";
+import Centers from "./pages/centers/Centers";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
-import Login from "./pages/login/Login";
+import Login from "./pages/registration/login/Login";
+import User_register from "./pages/registration/register/User_register";
 import "./styles/global.scss";
-
-
-
-
-
+import User from "./pages/user/User";
+import Product from "./pages/center/Center";
 
 function App() {
   const Layout = () => {
@@ -47,8 +45,16 @@ function App() {
           element: <Users />,
         },
         {
-          path: "/products",
-          element: <Products />,
+          path: "/centers",
+          element: <Centers />,
+        },
+        {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
+          path: "/centers/:id",
+          element: <Product />,
         },
 
       ],
@@ -56,6 +62,10 @@ function App() {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/user_register",
+      element: <User_register />,
     },
   ]);
 

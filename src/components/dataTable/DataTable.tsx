@@ -1,88 +1,65 @@
+// DataTable.jsx
+
 import {
-    DataGrid,
-    GridColDef,
-    GridToolbar,
-  } from "@mui/x-data-grid";
-  import "./dataTable.scss";
-  import { Link } from "react-router-dom";
-  // import { useMutation, useQueryClient } from "@tanstack/react-query";
-  
-  type Props = {
-    columns: GridColDef[];
-    rows: object[];
-    slug: string;
+  DataGrid,
+  GridColDef,
+  GridToolbar,
+} from "@mui/x-data-grid";
+import "./dataTable.scss";
+import { Link } from "react-router-dom";
+
+type Props = {
+  columns: GridColDef[];
+  rows: object[];
+  slug: string;
+  hideExportOption?: boolean; // Optional prop to hide export option
+};
+
+const DataTable = (props: Props) => {
+  const handleDelete = (id: number) => {
+    //delete the item
+    // mutation.mutate(id)
   };
-  
-  const DataTable = (props: Props) => {
-  
-    // TEST THE API
-  
-    // const queryClient = useQueryClient();
-    // // const mutation = useMutation({
-    // //   mutationFn: (id: number) => {
-    // //     return fetch(`http://localhost:8800/api/${props.slug}/${id}`, {
-    // //       method: "delete",
-    // //     });
-    // //   },
-    // //   onSuccess: ()=>{
-    // //     queryClient.invalidateQueries([`all${props.slug}`]);
-    // //   }
-    // // });
-  
-    const handleDelete = (id: number) => {
-      //delete the item
-      // mutation.mutate(id)
-    };
-  
-    const actionColumn: GridColDef = {
-      field: "action",
-      headerName: "Action",
-      width: 200,
-      renderCell: (params) => {
-        return (
-          <div className="action">
-            <Link to={`/${props.slug}/${params.row.id}`}>
-              <img src="/view.svg" alt="" />
-            </Link>
-            <div className="delete" onClick={() => handleDelete(params.row.id)}>
-              <img src="/delete.svg" alt="" />
-            </div>
+
+  const actionColumn: GridColDef = {
+    field: "action",
+    headerName: "Action",
+    width: 100,
+    renderCell: (params) => {
+      return (
+        <div className="action">
+          <Link to={`/${props.slug}/${params.row.id}`}>
+            <img src="/view.svg" alt="" />
+          </Link>
+          <div className="delete" onClick={() => handleDelete(params.row.id)}>
+            <img src="/delete.svg" alt="" />
           </div>
-        );
-      },
-    };
-  
-    return (
-      <div className="dataTable">
-        <DataGrid
-          className="dataGrid"
-          rows={props.rows}
-          columns={[...props.columns, actionColumn]}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize: 10,
-              },
-            },
-          }}
-          slots={{ toolbar: GridToolbar }}
-          slotProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { debounceMs: 500 },
-            },
-          }}
-          pageSizeOptions={[5]}
-          checkboxSelection
-          disableRowSelectionOnClick
-          disableColumnFilter
-          disableDensitySelector
-          disableColumnSelector
-          disableColumnMenu
-         
-        />
-      </div>
-    );
+        </div>
+      );
+    },
   };
-  
-  export default DataTable;
+
+  return (
+    <div className="dataTable">
+      <DataGrid
+        className="dataGrid"
+        rows={props.rows}
+        columns={[...props.columns, actionColumn]}
+        pageSize={5} // Adjust the number of rows per page as needed
+        disableSelectionOnClick
+        hideFooter
+        hideToolbar={props.hideExportOption} // Hide the toolbar, including the export option
+        checkboxSelection
+        disableRowSelectionOnClick
+        disableColumnFilter
+        disableDensitySelector
+        disableColumnSelector
+        disableColumnMenu
+        pageSizeOptions={[5]}
+        disableExtendRowFullWidth
+      />
+    </div>
+  );
+};
+
+export default DataTable;

@@ -1,18 +1,32 @@
-
+@import "../../styles/responsive.scss";
 
 .topBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   h1 {
     margin-bottom: 20px;
 
-   
+    @include xxl {
+      font-size: 24px;
+    }
   }
 
   .list {
+    width: 100%; // Ensure the list takes full width
+
     .listItem {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 30px;
+
+      @include xxl {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
       .user {
         display: flex;
@@ -24,7 +38,12 @@
           border-radius: 50%;
           object-fit: cover;
 
-        
+          @include xxl {
+            display: none;
+          }
+          @include lg {
+            display: block;
+          }
         }
 
         .userTexts {
@@ -36,10 +55,16 @@
             font-size: 14px;
             font-weight: 500;
           }
-          .email {
+
+          .location {
             font-size: 12px;
 
-           
+            @include xxl {
+              display: none;
+            }
+            @include lg {
+              display: block;
+            }
           }
         }
       }

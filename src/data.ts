@@ -5,28 +5,18 @@ export const menu = [
       listItems: [
         {
           id: 1,
-          title: "Overview",
-          url: "/dashboard",
+          title: "Home",
+          url: "/",
           icon: "overview.svg",
         },
-        {
-          id: 2,
-          title: "Statistics",
-          url: "/dashboard/statistics",
-          icon: "statistics.svg",
-        },
+        
       ],
     },
     {
       id: 2,
       title: "Data Management",
       listItems: [
-        {
-          id: 1,
-          title: "Addiction Cases",
-          url: "/data/addiction-cases",
-          icon: "addiction-cases.svg",
-        },
+      
         {
           id: 2,
           title: "Patient Details",
@@ -37,11 +27,11 @@ export const menu = [
     },
     {
       id: 3,
-      title: "Reports and Analytics",
+      title: "Analytics",
       listItems: [
         {
           id: 1,
-          title: "Generate Reports",
+          title: "Reports",
           url: "/analytics/generate-reports",
           icon: "generate-reports.svg",
         },
@@ -49,12 +39,12 @@ export const menu = [
     },
     {
       id: 4,
-      title: "Resource Management",
+      title: "Resources",
       listItems: [
         {
           id: 1,
-          title: "Treatment Centers",
-          url: "/resources/treatment-centers",
+          title: "Centers",
+          url: "/centers",
           icon: "treatment-centers.svg",
         },
         
@@ -72,20 +62,9 @@ export const menu = [
         },
       ],
     },
+
     {
       id: 6,
-      title: "Financial Overview",
-      listItems: [
-        {
-          id: 1,
-          title: "Budget Allocation",
-          url: "/financial/budget-allocation",
-          icon: "budget-allocation.svg",
-        },
-      ],
-    },
-    {
-      id: 7,
       title: "Help and Support",
       listItems: [
         {
@@ -97,7 +76,7 @@ export const menu = [
       ],
     },
     {
-      id: 8,
+      id: 7,
       title: "Logout",
       listItems: [
         {
@@ -160,7 +139,7 @@ export const menu = [
       location: "Hyderabad",
     },
   ];
-  export const chartBoxUser = {
+  export const chartBoxPatient = {
     color: "#8884d8",
     icon: "/userIcon.svg",
     title: "Total Patients",
@@ -178,7 +157,7 @@ export const menu = [
     ],
   };
   
-  export const chartBoxProduct = {
+  export const chartBoxCenter = {
     color: "skyblue",
     icon: "/productIcon.svg",
     title: "Total Centers",
@@ -195,7 +174,7 @@ export const menu = [
       { name: "Sat", products: 450 },
     ],
   };
-  export const chartBoxRevenue = {
+  export const chartBoxStates = {
     color: "teal",
     icon: "/revenueIcon.svg",
     title: "States Covered",
@@ -204,7 +183,7 @@ export const menu = [
     
     
   };
-  export const chartBoxConversion = {
+  export const chartBoxSuccesses = {
     color: "gold",
     icon: "/conversionIcon.svg",
     title: "Total Successes",
@@ -221,7 +200,7 @@ export const menu = [
       { name: "Sat", ratio: 450 },
     ],
   };
-  export const barChartBoxRevenue = {
+  export const barChartBoxRelapse = {
     title: "Relapse Rates",
     color: "#8884d8",
     dataKey: "rate",
@@ -257,7 +236,7 @@ export const menu = [
     ],
   };
   
-  export const barChartBoxVisit = {
+  export const barChartBoxSessions = {
     title: "Sessions Conducted",
     color: "#FF8042",
     dataKey: "sessions",
@@ -292,7 +271,7 @@ export const menu = [
       },
     ],
   };
-  export const userRows = [
+  export const patientRows = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
@@ -437,3 +416,238 @@ export const menu = [
       createdAt: "01.02.2023",
     },
   ];
+  export const centers = [
+    {
+      id: 1,
+      img: "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png",
+      title: "Playstation 5 Digital Edition",
+      color: "white",
+      
+    },
+    {
+      id: 2,
+      img: "https://www.pngmart.com/files/6/Dell-Laptop-PNG-Image.png",
+      title: "Dell Laptop KR211822",
+      color: "black",
+      
+    },
+    {
+      id: 3,
+      img: "http://images.samsung.com/is/image/samsung/uk-led-tv-hg40ed670ck-hg40ed670ckxxu-001-front",
+      title: "Samsung TV 4K SmartTV",
+      color: "gray",
+      
+    },
+    {
+      id: 4,
+      img: "https://raylo.imgix.net/iphone-14-blue.png",
+      title: "Apple Iphone 14 Pro Max",
+      color: "white",
+      
+    },
+    {
+      id: 5,
+      img: "https://www.signify.com/b-dam/signify/en-aa/about/news/2020/20200903-movie-night-essentials-popcorn-ice-cream-and-the-new-philips-hue-play-gradient-lightstrip/packaging-lighstrip.png",
+      title: "Philips Hue Play Gradient",
+      
+    },
+    {
+      id: 6,
+      img: "https://www.smartworld.it/wp-content/uploads/2019/09/High_Resolution_PNG-MX-Master-3-LEFT-GRAPHITE.png",
+      title: "Logitech MX Master 3",
+      color: "black",
+      
+    },
+    {
+      id: 7,
+      img: "https://www.pngarts.com/files/7/Podcast-Mic-PNG-Picture.png",
+      title: "Rode Podcast Microphone",
+      color: "gray",
+      
+    },
+    {
+      id: 8,
+      img: "https://5.imimg.com/data5/SW/VM/MY-5774620/toshiba-split-ac-2-ton-3-star-rated-ras-24s3ks-500x500.png",
+      title: "Toshiba Split AC 2",
+      color: "white",
+      
+    },
+    {
+      id: 9,
+      img: "https://img.productz.com/review_image/102489/preview_sony-kdl-50w800b-50-inch-hdtv-review-superb-picture-102489.png",
+      title: "Sony Bravia KDL-47W805A",
+      color: "black",
+      
+    },
+    {
+      id: 10,
+      img: "https://venturebeat.com/wp-content/uploads/2015/07/As_AO1-131_gray_nonglare_win10_03.png?fit=1338%2C1055&strip=all",
+      title: "Acer Laptop 16 KL-4804",
+      color: "black",
+      
+    },
+  ];
+
+  export const singlePatient = {
+    id: 1,
+    title: "John Doe",
+    img: "https://images.pexels.com/photos/17397364/pexels-photo-17397364.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    info: {
+      username: "Johndoe99",
+      fullname: "John Doe",
+      email: "johndoe@gmail.com",
+      phone: "123 456 789",
+      status: "verified",
+    },
+    chart: {
+      dataKeys: [
+        { name: "visits", color: "#82ca9d" },
+        { name: "clicks", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Sun",
+          visits: 4000,
+          clicks: 2400,
+        },
+        {
+          name: "Mon",
+          visits: 3000,
+          clicks: 1398,
+        },
+        {
+          name: "Tue",
+          visits: 2000,
+          clicks: 3800,
+        },
+        {
+          name: "Wed",
+          visits: 2780,
+          clicks: 3908,
+        },
+        {
+          name: "Thu",
+          visits: 1890,
+          clicks: 4800,
+        },
+        {
+          name: "Fri",
+          visits: 2390,
+          clicks: 3800,
+        },
+        {
+          name: "Sat",
+          visits: 3490,
+          clicks: 4300,
+        },
+      ],
+    },
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "John Doe added 3 items into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "John Doe purchased Sony Bravia KD-32w800",
+        time: "2 weeks ago",
+      },
+      {
+        text: "John Doe reviewed a product",
+        time: "1 month ago",
+      },
+      {
+        text: "John Doe added 1 items into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "John Doe reviewed a product",
+        time: "2 months ago",
+      },
+    ],
+  };
+
+  export const singleCenter = {
+    id: 1,
+    title: "Playstation 5 Digital Edition",
+    img: "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png",
+    info: {
+      productId: "Ps5SDF1156d",
+      color: "white",
+      price: "$250.99",
+      producer: "Sony",
+      export: "Japan",
+    },
+    chart: {
+      dataKeys: [
+        { name: "visits", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Sun",
+          visits: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Mon",
+          visits: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Tue",
+          visits: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Wed",
+          visits: 2780,
+          orders: 3908,
+        },
+        {
+          name: "Thu",
+          visits: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Fri",
+          visits: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Sat",
+          visits: 3490,
+          orders: 4300,
+        },
+      ],
+    },
+    activities: [
+      {
+        text: "John Doe purchased Playstation 5 Digital Edition",
+        time: "3 day ago",
+      },
+      {
+        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 week ago",
+      },
+      {
+        text: "Mike Doe purchased Playstation 5 Digital Edition",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Anna Doe reviewed the product",
+        time: "1 month ago",
+      },
+      {
+        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
+        time: "1 month ago",
+      },
+      {
+        text: "Helen Doe reviewed the product",
+        time: "2 months ago",
+      },
+    ],
+  };
